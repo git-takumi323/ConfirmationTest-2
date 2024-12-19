@@ -11,7 +11,8 @@
 - 例) Laravel 8.x(言語やフレームワーク、バージョンなどが記載されていると良い)
 
 ## ER図
-< - - - ![index](https://github.com/user-attachments/assets/3d527413-c122-4ead-bb2d-0d9063961b71)- - - >
+< ![index drawio](https://github.com/user-attachments/assets/f723f3ae-2d99-400c-ae34-96b3fe55330a)
+>
 
 ## URL
 - 例) 開発環境：http://localhost/
