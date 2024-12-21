@@ -13,3 +13,15 @@ npm-debug.log
 yarn-error.log
 /.idea
 /.vscode
+.DS_Store
+docker/mysql/data/
+
+# storage 配下のすべてを除外
+/storage/*
+
+# 例外として .gitignore は管理対象にする
+!/storage/.gitignore
+
+# storage/app/public フォルダのみ管理対象に含める
+!/storage/app/
+!/storage/app/public/
