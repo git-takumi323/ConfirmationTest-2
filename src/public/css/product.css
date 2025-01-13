@@ -154,7 +154,10 @@ body {
     background-color: #ff5722;
 }
 
+/* バリデーションエラーメッセージ */
 .product-detail-card .error {
-    color: red;
+    color: red !important;
     font-size: 12px;
+    margin-top: 5px;
 }
+

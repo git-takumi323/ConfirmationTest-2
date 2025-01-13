@@ -1,6 +1,8 @@
 @extends('layouts.app')
 
-@section('title', '商品詳細')
+@section('css')
+<link rel="stylesheet" href="{{ asset('css/product.css') }}">
+@endsection
 
 @section('content')
 <div class="product-detail">
@@ -37,12 +39,9 @@
                     {{ $season }}
                 </label>
                 @endforeach
-
-
                 @error('seasons')
                     <div class="error">{{ $message }}</div>
                 @enderror
-
 
                 <label for="description">商品説明</label>
                 <textarea id="description" name="description" placeholder="商品の説明を入力">{{ old('description', $product->description) }}</textarea>

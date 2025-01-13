@@ -7,7 +7,7 @@
     <!-- BootstrapのCSSを読み込む -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/common.css') }}">
-    @yield('styles')
+    @yield('css')
 </head>
 <body>
     <header>

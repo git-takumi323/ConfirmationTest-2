@@ -6,6 +6,11 @@ use Illuminate\Foundation\Http\FormRequest;
 
 class ProductRequest extends FormRequest
 {
+    public function authorize()
+    {
+        return true; // すべてのリクエストを許可
+    }
+
     public function rules()
     {
         return [
@@ -28,8 +33,11 @@ class ProductRequest extends FormRequest
             'seasons.required' => '季節を選択してください。',
             'description.required' => '商品説明を入力してください',
             'description.max' => '120文字以内で入力してください',
-            'image.image' => '商品画像を登録してください',
+            'image.required' => '商品画像を登録してください。',
+            'image.image' => 'アップロードされたファイルは画像形式ではありません。',
             'image.mimes' => '「.png」または「.jpeg」形式でアップロードしてください',
+            'image.max' => '画像サイズは2MB以下にしてください。',
         ];
     }
 }
+
