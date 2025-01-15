@@ -1,9 +1,11 @@
-/* 全体スタイル */
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f9f9f9;
+/* 商品詳細全体 */
+.product-detail {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* パンくずリスト */
@@ -22,45 +24,53 @@ body {
     text-decoration: underline;
 }
 
-/* 商品詳細のレイアウト */
-.product-detail {
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
+/* 商品詳細カード */
 .product-detail-card {
     display: flex;
     gap: 20px;
+    align-items: flex-start; /* 縦方向で揃える */
 }
 
 /* 商品画像 */
+.product-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .product-image img {
-    max-width: 300px;
+    max-width: 100%;
     height: auto;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px; /* ファイル選択ボタンとの間隔 */
 }
 
-/* 商品情報 */
-.product-info {
+.file-input-container {
+    text-align: center;
+}
+
+.product-image input[type="file"] {
+    font-size: 14px;
+}
+
+/* 商品情報ラップ */
+.product-info-wrapper {
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    justify-content: center; /* 中央揃え */
+    gap: 20px; /* 情報間のスペース */
 }
 
+/* 商品情報 */
 .product-info label {
     font-size: 14px;
     color: #333;
     margin-bottom: 5px;
 }
 
-.product-info input,
-.product-info textarea {
+.product-info input {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
@@ -68,32 +78,51 @@ body {
     font-size: 14px;
 }
 
-.product-info textarea {
+/* 季節チェックボックス */
+.season-checkboxes {
+    display: flex;
+    gap: 10px;
+}
+
+.season-checkboxes label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+}
+
+/* 商品説明 */
+.product-description {
+    margin-top: 20px;
+}
+
+.product-description label {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.product-description textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
     resize: none;
     height: 100px;
 }
 
-.product-info input[type="file"] {
-    padding: 0;
+/* ボタン */
+.button-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
 }
 
-.product-info .error {
-    color: red;
-    font-size: 12px;
-}
-
-/* 季節チェックボックス */
-.product-info label input[type="checkbox"] {
-    margin-right: 5px;
-}
-
-.product-info label {
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
-}
-
-/* ボタンスタイル */
 .btn-edit {
     background-color: #f9c847;
     color: #fff;
@@ -102,7 +131,6 @@ body {
     border-radius: 5px;
     cursor: pointer;
     font-size: 14px;
-    font-weight: bold;
 }
 
 .btn-edit:hover {
@@ -142,10 +170,16 @@ body {
 @media (max-width: 768px) {
     .product-detail-card {
         flex-direction: column;
+        align-items: center;
     }
 
     .product-image img {
         max-width: 100%;
         height: auto;
+    }
+
+    .button-group {
+        flex-direction: column;
+        gap: 15px;
     }
 }
