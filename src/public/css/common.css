@@ -9,7 +9,7 @@ body {
 
 a {
     text-decoration: none;
-    color: inherit;
+    color: #333; /* リンクのデフォルト文字色を設定 */
 }
 
 /* ヘッダー */
@@ -21,7 +21,7 @@ header {
 
 .header-container {
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 0 ;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -35,9 +35,8 @@ header {
 
 /* メインコンテンツ */
 .main-container {
-    max-width: 1200px;
     margin: 20px auto;
-    padding: 0 20px;
+    padding: 0 px;
 }
 
 /* フッター */
