@@ -13,6 +13,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $this->call(ProductSeasonTableSeeder::class);
+        $this->call(ProductsTableSeeder::class);        // 製品データを挿入
+        $this->call(SeasonsTableSeeder::class);         // 季節データを挿入
+        $this->call(ProductSeasonTableSeeder::class);   // 製品と季節の関連データを挿入
     }
 }
