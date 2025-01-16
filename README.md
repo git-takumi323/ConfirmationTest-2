@@ -24,4 +24,4 @@
 >
 
 ## URL
-- 例) 開発環境：http://localhost/
+- 例) 開発環境：http://localhost/products
