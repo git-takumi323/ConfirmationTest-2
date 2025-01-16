@@ -69,15 +69,20 @@
             @enderror
         </div>
 
-        <!-- ボタン -->
         <div class="button-group">
+        <!-- 中央のボタン（変更を保存・戻る） -->
+        <div class="center-buttons">
             <button type="submit" class="btn-edit">変更を保存</button>
             <a href="/products" class="btn-back">戻る</a>
-            <form action="/products/{{ $product->id }}/delete" method="POST" style="display:inline;">
-                @csrf
-                <button type="submit" class="btn-delete">削除</button>
-            </form>
         </div>
+
+        <!-- 右端の削除ボタン -->
+        <form action="/products/{{ $product->id }}/delete" method="POST" style="display:inline;">
+            @csrf
+            <button type="submit" class="btn-delete">削除</button>
+        </form>
+        </div>
+
     </form>
 </div>
 @endsection

@@ -112,17 +112,22 @@
     height: 100px;
 }
 
-/* ボタン */
+/* ボタン全体 */
 .button-group {
     display: flex;
-    gap: 10px;
+    justify-content: space-between; /* 左右に要素を分ける */
+    align-items: center; /* 縦方向を中央揃え */
     margin-top: 20px;
-    justify-content: center;
-    align-content: center;
-    flex-wrap: nowrap;
-    flex-direction: row;
 }
 
+/* 中央に配置するボタン（変更を保存・戻る） */
+.center-buttons {
+    display: flex;
+    gap: 10px; /* ボタン間の余白 */
+    margin: 0 auto; /* ボタンを中央揃え */
+}
+
+/* ボタンのスタイル */
 .btn-edit {
     background-color: #f9c847;
     color: #fff;
@@ -165,6 +170,7 @@
 .btn-delete:hover {
     background-color: darkred;
 }
+
 
 /* レスポンシブ対応 */
 @media (max-width: 768px) {
