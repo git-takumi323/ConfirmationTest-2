@@ -9,9 +9,6 @@
 - exit
 - envファイル書き換え、DB_HOST=mysql、DB_DATABASE=laravel_db、DB_USERNAME=laravel_user、DB_PASSWORD=laravel_pass
 - php artisan migrate
-- php artisan make:seeder ProductsTableSeeder
-- php artisan make:seeder SeasonsTableSeeder
-- php artisan make:seeder ProductSeasonTableSeeder
 - php artisan db:seed
 
 ## 使用技術(実行環境)
