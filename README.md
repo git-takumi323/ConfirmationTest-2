@@ -4,10 +4,10 @@
 - Dockerのビルドからマイグレーション、シーディングまでを記述する
 - docker-compose up -d --build
 - docker-compose exec php bash
-- composer create-project "laravel/laravel=8.*" . --prefer-dist
-- php artisan make:migration create_products_table
-- php artisan make:migration create_seasons_table
-- php artisan make:migration create_product_season_table
+- composer install
+- cp .env.example .env
+- exit
+- envファイル書き換え、DB_HOST=mysql、DB_DATABASE=laravel_db、DB_USERNAME=laravel_user、DB_PASSWORD=laravel_pass
 - php artisan migrate
 - php artisan make:seeder ProductsTableSeeder
 - php artisan make:seeder SeasonsTableSeeder
