@@ -18,7 +18,7 @@
 - Composer version 2.8.1 2024-10-04 11:31:01
 - mysql  Ver 15.1 Distrib 10.3.39-MariaDB, for debian-linux-gnu (x86_64) using readline 5.2
 - ginx version: nginx/1.21.1
-
+  
 ## ER図
 < ![index drawio](https://github.com/user-attachments/assets/f723f3ae-2d99-400c-ae34-96b3fe55330a)
 >
